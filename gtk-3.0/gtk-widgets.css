@@ -10,14 +10,14 @@
     -GtkButton-image-spacing: 0;
     -GtkButton-inner-border: 1;
     -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
+    -GtkButtonBox-child-min-height: 12;
     -GtkButtonBox-child-internal-pad-y: 1;
-    -GtkCheckButton-indicator-size: 16;
-    -GtkCheckMenuItem-indicator-size: 14;
-    -GtkExpander-expander-size: 8;
+    -GtkCheckButton-indicator-size: 12;
+    -GtkCheckMenuItem-indicator-size: 12;
+    -GtkExpander-expander-size: 4;
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
-    -GtkPaned-handle-size: 4;
+    -GtkPaned-handle-size: 3;
     -GtkProgressBar-min-horizontal-bar-height: 12;
     -GtkProgressBar-min-vertical-bar-width: 12;
     -GtkRange-slider-width: 12;
@@ -32,8 +32,8 @@
     -GtkStatusbar-shadow-type: none;
     -GtkTextView-error-underline-color: @error_color;
     -GtkToolButton-icon-spacing: 6;
-    -GtkToolItemGroup-expander-size: 8;
-    -GtkTreeView-expander-size: 8;
+    -GtkToolItemGroup-expander-size: 6;
+    -GtkTreeView-expander-size: 4;
     -GtkWindow-resize-grip-height: 0;
     -GtkWindow-resize-grip-width: 0;
     -WnckTasklist-fade-overlay-rect: 0;
@@ -209,7 +209,7 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-    padding: 2px;
+    padding: 1px;
     border-width: 0 1px 0 0;
     border-style: solid;
     border-right-color: shade(@theme_bg_color, 0.8);
@@ -399,7 +399,7 @@ column-header:last-child .button {
 }
 
 GdMainIconView.content-view {
-    -GdMainIconView-icon-size: 40;
+    -GdMainIconView-icon-size: 16;
 }
 
 GtkIconView.content-view.check {
@@ -504,11 +504,11 @@ GtkComboBox.combobox-entry .button:insensitive {
  * entry *
  *********/
 .entry {
-    padding: 2px 1px;
+    padding: 1px 1px;
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    border-radius: 2px;
+    border-radius: 1px;
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
@@ -543,7 +543,7 @@ GtkComboBox.combobox-entry .button:insensitive {
  * expander *
 ************/
 GtkExpander {
-    padding: 2px;
+    padding: 1px;
     outline-offset: 1px;
 }
 
@@ -573,7 +573,7 @@ GtkExpander {
 .list-row {
     border: none;
     border-radius: 0;
-    padding: 3px;
+    padding: 2px;
     background-image: none;
     background-color: transparent;
 }
@@ -594,7 +594,7 @@ GtkExpander {
 **************/
 
 .grid-child {
-    padding: 3px;
+    padding: 2px;
 }
 
 /*********
@@ -1029,7 +1029,7 @@ GtkComboBox .menu {
  ***************/
 .menubar.menuitem,
 .menubar .menuitem {
-    padding: 2px 2px;
+    padding: 1px 1px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -1062,7 +1062,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem {
     -GtkMenuItem-arrow-scaling: 0.5;
 
-    padding: 2px;
+    padding: 1px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -1143,15 +1143,15 @@ GtkTreeMenu .menuitem {
 }
 
 GtkModelMenuItem GtkBox GtkImage {
-    padding-right: 4px;
+    padding-right: 2px;
 }
 
 /************
  * popovers *
  ************/
 GtkPopover {
-    margin: 10px;
-    padding: 2px;
+    margin: 4px;
+    padding: 1px;
     border-radius: 2px;
     border-color: shade(@menu_bg_color, 0.8);
     border-width: 1px;
@@ -1366,7 +1366,7 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab {
-    padding: 2px 3px;
+    padding: 1px 1px;
     border-style: solid;
     border-width: 1px;
     border-color: transparent;
@@ -1555,13 +1555,13 @@ GtkProgressBar {
 
 /* level bars as used for password quality or remaining power */
 GtkLevelBar {
-    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-width: 16;
     -GtkLevelBar-min-block-height: 2;
 }
 
 GtkLevelBar.vertical {
     -GtkLevelBar-min-block-width: 2;
-    -GtkLevelBar-min-block-height: 34;
+    -GtkLevelBar-min-block-height: 16;
 }
 
 .level-bar.trough {
@@ -1639,7 +1639,7 @@ GtkLevelBar.vertical {
     -GtkRange-trough-border: 1;
     -GtkScale-slider-length: 16;
 
-    padding: 0;
+    padding: 1px;
     border-width: 1px;
     border-radius: 2px;
     outline-offset: -1px;
@@ -1686,7 +1686,7 @@ GtkLevelBar.vertical {
 }
 
 .scale.trough {
-    margin: 7px 0;
+    margin: 4px 0;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 2px;
     background-color: shade(@theme_bg_color, 1.08);
@@ -1694,7 +1694,7 @@ GtkLevelBar.vertical {
 }
 
 .scale.trough.vertical {
-    margin: 0 7px;
+    margin: 0 4px;
 }
 
 .menuitem .scale.highlight.left,
@@ -1728,7 +1728,7 @@ GtkLevelBar.vertical {
 .scrollbar {
     border-width: 1px;
     border-style: solid;
-    padding: 0;
+    padding: 1px;
 }
 
 .scrollbars-junction,
@@ -1771,7 +1771,7 @@ GtkLevelBar.vertical {
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
-      border-width: 2px;
+      border-width: 1px;
       border-color: transparent;
 }
 
@@ -2078,7 +2078,7 @@ GtkStatusbar {
  * switch *
  **********/
 GtkSwitch {
-    padding: 0;
+    padding: 1px;
     border-radius: 2px;
     font: bold condensed;
     outline-offset: -4px;
@@ -2199,7 +2199,7 @@ GtkColorChooserWidget #add-color-button:hover {
 .color-active-badge:selected {
     border-width: 1px;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     background-color: transparent;
 }
 
@@ -2321,7 +2321,7 @@ GtkColorButton.button {
  * toolbar *
  ***********/
 .toolbar {
-    padding: 2px;
+    padding: 1px;
     border-style: none;
     background-color: @toolbar_bg_color;
     background-image: none;
@@ -2329,7 +2329,7 @@ GtkColorButton.button {
 }
 
 .toolbar .button {
-    padding: 2px;
+    padding: 1px;
 }
 
 .toolbar .button.text-button {
@@ -3283,12 +3283,12 @@ GtkViewport.frame {
 
 .action-bar .title {
     font: bold;
-    padding: 0 4px;
+    padding: 0 2px;
 }
 
 .action-bar .subtitle {
     font: smaller;
-    padding: 0 4px;
+    padding: 0 2px;
 }
 
 /***************
@@ -3315,7 +3315,7 @@ GtkMessageDialog,
     -GtkDialog-button-spacing: 0;
 
     margin: 0;
-    padding: 0;
+    padding: 1px;
 }
 
 /********************
@@ -3589,12 +3589,12 @@ GtkProgressBar.osd {
     -GtkProgressBar-yspacing: 2px;
     -GtkProgressBar-min-horizontal-bar-height: 2px;
 
-    padding: 0;
+    padding: 1px;
 }
 
 .osd GtkProgressBar.trough,
 GtkProgressBar.osd.trough {
-    padding: 0;
+    padding: 1px;
     border-style: none;
     border-radius: 0;
     background-image: none;
@@ -3640,7 +3640,7 @@ GtkProgressBar.osd.progressbar {
     background-color: transparent;
     border-style: solid;
     border-radius: 2px;
-    border-width: 3px;
+    border-width: 1px;
     border-color: @osd_fg;
     outline-color: transparent;
 }
@@ -3952,12 +3952,12 @@ GtkBubbleWindow .toolbar {
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
 
     /* this is used for the resize cursor area */
-    margin: 15px;
+    margin: 4px;
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.24),
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+                0 1px 1px rgba(0, 0, 0, 0.24),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
 }
 
@@ -3967,8 +3967,8 @@ GtkBubbleWindow .toolbar {
 
 .window-frame.csd.popup {
     border-radius: 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-                0 3px 6px rgba(0, 0, 0, 0.23),
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16),
+                0 1px 1px rgba(0, 0, 0, 0.23),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
  }
 
@@ -3979,7 +3979,7 @@ GtkBubbleWindow .toolbar {
 
 .window-frame.csd.message-dialog {
     border-radius: 2px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-                0 3px 6px rgba(0, 0, 0, 0.23),
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),
+                0 1px 2px rgba(0, 0, 0, 0.23),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
 }

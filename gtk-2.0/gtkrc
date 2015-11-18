@@ -1,6 +1,7 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#111\nfg_color:#777\nbase_color:#121212\ntext_color:#aaa\nselected_bg_color:#de5e1e\nselected_fg_color:#000\ntooltip_bg_color:#121212\ntooltip_fg_color:#777\ntitlebar_bg_color:#121212\ntitlebar_fg_color:#de5e1e\nmenubar_bg_color:#121212\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#121212\ntoolbar_fg_color:#dcdcdc\nmenu_bg_color:#121212\nmenu_fg_color:#dcdcdc\npanel_bg_color:#121212\npanel_fg_color:#dcdcdc\nlink_color:#fc6f5d"
+gtk-color-scheme =
+"bg_color:#111\nfg_color:#777\nbase_color:#222\ntext_color:#aaa\nselected_bg_color:#de5e1e\nselected_fg_color:#000\ntooltip_bg_color:#222\ntooltip_fg_color:#777\ntitlebar_bg_color:#222\ntitlebar_fg_color:#de5e1e\nmenubar_bg_color:#111\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#222\ntoolbar_fg_color:#dcdcdc\nmenu_bg_color:#222\nmenu_fg_color:#dcdcdc\npanel_bg_color:#222\npanel_fg_color:#dcdcdc\nlink_color:#fc6f5d"
 
 # Default Style
 
@@ -12,9 +13,9 @@ style "murrine-default" {
 
 	GtkButton::default-border = { 0, 0, 0, 0 }
 
-	GtkButtonBox::child-min-height = 16
+	GtkButtonBox::child-min-height = 10
 
-	GtkCheckButton::indicator-size = 16
+	GtkCheckButton::indicator-size = 10
 
 	# The following line hints to gecko (and possibly other appliations)
 	# that the entry should be drawn transparently on the canvas.
@@ -22,7 +23,7 @@ style "murrine-default" {
 	GtkEntry::honors-transparent-bg-hint = 1
 	GtkEntry::state-hint = 0
 
-	GtkExpander::expander-size = 16
+	GtkExpander::expander-size = 12
 
 	GtkImage::x-ayatana-indicator-dynamic = 1
 
@@ -36,17 +37,17 @@ style "murrine-default" {
 
 	GtkPaned::handle-size = 1
 
-	GtkProgressBar::min-horizontal-bar-height = 12
-	GtkProgressBar::min-vertical-bar-width = 12
+	GtkProgressBar::min-horizontal-bar-height = 10
+	GtkProgressBar::min-vertical-bar-width = 10
 
 	GtkRange::trough-border = 0
-	GtkRange::slider-width = 12
-	GtkRange::stepper-size = 12
+	GtkRange::slider-width = 10
+	GtkRange::stepper-size = 10
 	GtkRange::stepper_spacing = 0
 	GtkRange::trough-under-steppers = 1
 
-	GtkScale::slider-length = 16
-	GtkScale::slider-width = 16
+	GtkScale::slider-length = 12
+	GtkScale::slider-width = 12
 	GtkScale::trough-side-details = 1
 
 	GtkScrollbar::activate-slider = 1
@@ -55,7 +56,7 @@ style "murrine-default" {
 	GtkScrollbar::has-secondary-backward-stepper = 0
 	GtkScrollbar::has-secondary-forward-stepper = 0
 	GtkScrollbar::min-slider-length = 80
-	GtkScrollbar::slider-width = 12
+	GtkScrollbar::slider-width = 10
 	GtkScrollbar::trough-border = 0
 
 	GtkScrolledWindow::scrollbar-spacing = 0
@@ -122,10 +123,10 @@ style "murrine-default" {
 	engine "murrine" {
 		animation = FALSE
 		arrowstyle = 1 # 0 = normal arrows, 1 = filled arrows
-		border_shades = { 1.0, 1.0 } # gradient to draw on border
+		border_shades = { 0.5, 0.5 } # gradient to draw on border
 		colorize_scrollbar = FALSE
-		comboboxstyle = 0 # 0 = normal combobox, 1 = colorized combobox below arrow
-		contrast = 0.8 # overal contrast with borders
+		comboboxstyle = 1 # 0 = normal combobox, 1 = colorized combobox below arrow
+		contrast = 0.7 # overal contrast with borders
 		focusstyle = 2 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
 		glazestyle = 0 # 0 = flat highlight, 1 = curved highlight, 2 = concave, 3 = top curved highlight, 4 = beryl highlight
 		glowstyle = 0 # 0 = glow on top, 1 = glow on bottom, 2 = glow on top and bottom, 3 = glow on middle vertically, 4 = glow on middle horizontally, 5 = glow on all sides
@@ -216,7 +217,7 @@ style "murrine-scale" = "murrine-thin" {
 	bg[INSENSITIVE] = shade (0.95, @bg_color)
 
 	engine "murrine" {
-		roundness = 1
+		roundness = 0
 		gradient_shades = { 1.08, 1.08, 1.08, 1.08 }
 		border_shades = { 1.0, 1.0 }
 		trough_shades = { 1.08, 1.08 }
@@ -231,9 +232,7 @@ style "murrine-progressbar" = "murrine-thin" {
 	fg[PRELIGHT] = @selected_fg_color
 
 	engine "murrine" {
-		roundness = 2
-		border_shades = { 1.2, 1.2 }
-		trough_border_shades = { 0.8, 0.8 }
+		roundness = 1
 	}
 }
 
@@ -337,7 +336,7 @@ style "murrine-menu-item" = "murrine-wide" {
 
 	engine "murrine" {
 		textstyle = 0
-		border_shades = { 1.2, 1.2 }
+		border_shades = { 1.0, 1.0 }
 	}
 }
 
@@ -345,14 +344,14 @@ style "murrine-separator-menu-item" = "murrine-thin" { }
 
 style "murrine-menubar" {
 	bg[NORMAL] = @menubar_bg_color
-	bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-	bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-	bg[ACTIVE] = shade (0.9, @menubar_bg_color)
+	bg[PRELIGHT] =  @menubar_bg_color
+	bg[SELECTED] =  @selected_bg_color
+	bg[ACTIVE] = @menubar_bg_color
 	bg[INSENSITIVE] = @menubar_bg_color
 
 	fg[NORMAL] = @menubar_fg_color
-	fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
-	fg[SELECTED] = shade (1.08, @menubar_fg_color)
+	fg[PRELIGHT] = @menubar_fg_color
+	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @menubar_fg_color
 	fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
 
@@ -524,9 +523,9 @@ style "xfdesktop-icon-view" {
 style "xfwm-tabwin" {
 	Xfwm4TabwinWidget::border-width = 1
         Xfwm4TabwinWidget::border-alpha = 1.0
-	Xfwm4TabwinWidget::icon-size = 16
+	Xfwm4TabwinWidget::icon-size = 12
         Xfwm4TabwinWidget::alpha = 1.0
-        Xfwm4TabwinWidget::border-radius = 2
+        Xfwm4TabwinWidget::border-radius = 1
 
 	bg[NORMAL] = @menu_bg_color
 	bg[SELECTED] = @menu_bg_color
