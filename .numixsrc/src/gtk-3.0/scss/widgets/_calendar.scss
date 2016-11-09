@@ -4,7 +4,7 @@
 
 @include exports("calendar") {
     GtkCalendar {
-        padding: 1px 3px;
+        padding: 1px 5px;
         outline-offset: -1px;
 
         &:inconsistent { color: mix($fg_color, $bg_color, .5); }
@@ -20,7 +20,7 @@
 
         &.button {
             &, &:focus, &:hover, &:insensitive {
-                color: $white;
+                color: $fg_color;
                 border-width: 0;
                 box-shadow: none;
             }
@@ -32,7 +32,6 @@
     /* gnome-calendar */
     .calendar-view {
         background-color: $base_color;
-        color: $text_color;
+        color: $fg_color;
     }
 }
-
