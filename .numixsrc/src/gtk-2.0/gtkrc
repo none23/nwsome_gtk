@@ -1,6 +1,6 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#eeeeee\nfg_color:#555555\nbase_color:#ffffff\ntext_color:#333333\nselected_bg_color:#f0544c\nselected_fg_color:#ffffff\ntooltip_bg_color:#444444\ntooltip_fg_color:#eeeeee\ntitlebar_bg_color:#444444\ntitlebar_fg_color:#dddddd\nmenubar_bg_color:#444444\nmenubar_fg_color:#dddddd\ntoolbar_bg_color:#eeeeee\ntoolbar_fg_color:#555555\nmenu_bg_color:#444444\nmenu_fg_color:#dddddd\npanel_bg_color:#444444\npanel_fg_color:#dddddd\nlink_color:#f06860"
+gtk-color-scheme = "bg_color:#111111\nfg_color:#cccccc\nbase_color:#232323\ntext_color:#999999\nselected_bg_color:#de5e1e\nselected_fg_color:#000000\ntooltip_bg_color:#222222\ntooltip_fg_color:#eeeeee\ntitlebar_bg_color:#232323\ntitlebar_fg_color:#dddddd\nmenubar_bg_color:#121212\nmenubar_fg_color:#dddddd\ntoolbar_bg_color:#212121\ntoolbar_fg_color:#555555\nmenu_bg_color:#333333\nmenu_fg_color:#dddddd\npanel_bg_color:#121212\npanel_fg_color:#dddddd\nlink_color:#de5e1e"
 
 # Default Style
 
@@ -804,3 +804,18 @@ widget "xfwm4-tabwin*" style "xfwm-tabwin"
 widget "xfwm4-tabwin*GtkButton*" style "xfwm-tabwin-button"
 widget_class "*XfsmLogoutDialog*" style "xfsm-logout"
 widget_class "*XfsmLogoutDialog*GtkButton" style "xfsm-logout-button"
+
+style "chrome-gtk-frame"
+{
+    ChromeGtkFrame::frame-color = "#121212"
+    ChromeGtkFrame::inactive-frame-color = "#212121"
+
+    ChromeGtkFrame::frame-gradient-size = 12
+    ChromeGtkFrame::frame-gradient-color = "#232323"
+
+    ChromeGtkFrame::scrollbar-trough-color = @bg_color
+    ChromeGtkFrame::scrollbar-slider-prelight-color = "#de5e1e"
+    ChromeGtkFrame::scrollbar-slider-normal-color = "#232323"
+}
+
+class "ChromeGtkFrame" style "chrome-gtk-frame"

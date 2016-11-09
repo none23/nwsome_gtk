@@ -3,38 +3,37 @@
 @import "functions";
 
 // default color scheme
-$bg_color: #111;
+$black: #111;
+$white: #fff;
+$nwsome_color: #de5e1e;
+$bg_color: #212121;
 $fg_color: #eee;
-$base_color: #222;
-$text_color: #eee;
-$selected_bg_color: #de5e1e;
-$selected_fg_color: #000;
-$tooltip_bg_color: #272727;
-$tooltip_fg_color: #eee;
+$dark_bg_color: #121212;
+$dark_fg_color: $fg_color;
+$base_color: $bg_color;
+$text_color: $fg_color;
+$selected_bg_color: $nwsome_color;
+$selected_fg_color: $black;
+$tooltip_bg_color: $bg_color;
+$tooltip_fg_color: $fg_color;
 
 $selected_borders_color: darken($selected_bg_color, 15%);
 $borders_color: shade($bg_color, .88);
 $borders_edge: transparentize($fg_color, 0.83);
 
 // dark colors
-$dark_bg_color: #111;
-$dark_fg_color: #eee;
 
 // shadows
 $dark_shadow: #000;
 $light_shadow: #fff;
 
-// white and black
-$black: #000;
-$white: #fff;
-
 $button_border: shade($base_color, .9);
 $entry_border: alpha($dark_shadow, .06);
 
-$scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
+$scrollbar_bg_color: darken($bg_color, 5%);
 $scrollbar_slider_color: shade($bg_color, .5);
 $scrollbar_slider_hover_color: shade($bg_color, .3);
-$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 5%), lighten($selected_bg_color, 10%));
+$scrollbar_slider_active_color: lighten($selected_bg_color, 10%);
 
 $switch_disabled_bg_color: #ccc;
 $switch_disabled_border_color: #aaa;
@@ -45,17 +44,17 @@ $switch_fg_color: #8e969e;
 $switch_slider_bg_color: #000;
 
 // misc colors used by gtk+
-$info_fg_color: #fff;
-$info_bg_color: #1e9dde;
-$warning_fg_color: #fff;
-$warning_bg_color: #ef6c00;
-$question_fg_color: #fff;
+$info_fg_color: #ccc;
+$info_bg_color: #212121;
+$warning_fg_color: #121212;
+$warning_bg_color: #de5e1e;
+$question_fg_color: #121212;
 $question_bg_color: #ef6c00;
 $error_fg_color: #fff;
 $error_bg_color: #de1e1e;
 $link_color: #de5e1e;
-$success_color: #2ede1e;
-$warning_color: #de1e1e;
+$success_color: #de5e1e;
+$warning_color: #de5e1e;
 $error_color: #de1e1e;
 
 $toolbar_bg_color: $bg_color;

@@ -3,39 +3,43 @@
 @import "functions";
 
 // default color scheme
-$bg_color: #111;
-$fg_color: #eee;
-$base_color: #222;
-$text_color: #eee;
-$selected_bg_color: #de5e1e;
-$selected_fg_color: #000;
-$tooltip_bg_color: #272727;
-$tooltip_fg_color: #eee;
+$bg_color: #212121;
+$fg_color: #ccc;
+$dark_bg_color: #121212;
+$dark_fg_color: $fg_color;
+$nwsome_color: #de5e1e;
 
-// dark colors
-$dark_bg_color: #111;
-$dark_fg_color: #eee;
-
-// shadows
-$dark_shadow: #000;
-$light_shadow: #fff;
+$base_color: $bg_color;
+$text_color: $fg_color;
+$selected_bg_color: $nwsome_color;
+$selected_fg_color: $dark_bg_color;
+$tooltip_bg_color: $bg_color;
+$tooltip_fg_color: $fg_color;
 
 // white and black
-$black: #000;
+$black: #111;
 $white: #fff;
 
+// shadows
+$dark_shadow: $black;
+$light_shadow: $white;
+
 // misc colors used by gtk+
-$info_fg_color: #fff;
-$info_bg_color: #1e9dde;
-$warning_fg_color: #fff;
-$warning_bg_color: #ef6c00;
-$question_fg_color: #fff;
+$info_fg_color: $fg_color;
+$info_bg_color: $bg_color;
+
+$warning_fg_color: $black;
+$warning_bg_color: #de5e1e;
+
+$question_fg_color: $black;
 $question_bg_color: #ef6c00;
+
 $error_fg_color: #fff;
 $error_bg_color: #de1e1e;
+
 $link_color: #de5e1e;
-$success_color: #2ede1e;
-$warning_color: #de1e1e;
+$success_color: #de5e1e;
+$warning_color: #de5e1e;
 $error_color: #de1e1e;
 
 $toolbar_bg_color: $bg_color;
@@ -74,6 +78,6 @@ $wm_icons_unfocused_pressed: shade($selected_bg_color, .8);
 
 // widget styles
 $roundness: 2px;
-$spacing: 5px;
+$spacing: 3px;
 $gradient: 0;
 $contrast: .8;
