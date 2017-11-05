@@ -5,7 +5,7 @@
 @include exports("calendar") {
     calendar {
         padding: 1px 3px;
-        outline-offset: -1px;
+        outline-offset: 1px;
 
         color: $text_color;
 

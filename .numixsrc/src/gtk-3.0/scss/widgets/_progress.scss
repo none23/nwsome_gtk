@@ -116,7 +116,7 @@
         padding: 0;
         border-width: 1px;
         border-radius: $roundness;
-        outline-offset: -1px;
+        outline-offset: 1px;
 
 
         &.slider {
@@ -160,7 +160,7 @@
             &, .memuitem & {
                     @include linear-gradient($selected_bg_color);
                     border-color: $selected_bg_color;
-               
+
                     &:hover {
                         border-color: border_normal($selected_bg_color);
                         background-color: shade($selected_bg_color, .8);
@@ -173,7 +173,7 @@
             }
         }
 
-	&.highlight.bottom {              
+	&.highlight.bottom {
             @include linear-gradient($selected_bg_color);
             border-color: $selected_bg_color;
         }
